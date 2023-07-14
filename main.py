@@ -10,8 +10,8 @@ from datetime import datetime, timedelta
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
-TWILIO_SID = "AC643d14847fd604250d043b17b48a6112"
-TWILIO_AUTH_TOKEN = "58a3bbbc91f3e8d85b076c75efa35e00"
+TWILIO_SID = ""
+TWILIO_AUTH_TOKEN = ""
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
@@ -112,7 +112,7 @@ if increment>0.2:
         message = client.messages.create(
                              body=article,
                              from_='+14849788500',
-                             to='+917736221137'
+                             to=''
                          )
 
     print(message.sid)
@@ -124,7 +124,7 @@ if decrement>0.2:
     parameters_news = {
         "q": "Tesla",
         "sortBy": 'popularity',
-        "apiKey": "779677d967a94d05b96915da5e5d6200"
+        "apiKey": ""
     }
     response_news = requests.get(url="https://newsapi.org/v2/everything", params=parameters_news)
     response_news.raise_for_status()
@@ -150,7 +150,7 @@ if decrement>0.2:
         message = client.messages.create(
             body=article,
             from_='+14849788500',
-            to='+919072546104'
+            to=''
         )
 
     print(message.sid)
