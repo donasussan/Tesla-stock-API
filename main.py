@@ -35,7 +35,7 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 parameters_stock = {
     "function":"TIME_SERIES_DAILY_ADJUSTED",
     "symbol": "TSLA",
-    "apikey": "1M5P75X440FXD72F"
+    "apikey": ""
 }
 response_stock = requests.get(url="https://www.alphavantage.co/query", params=parameters_stock)
 data = response_stock.json()
@@ -84,7 +84,7 @@ if increment>0.2:
     parameters_news = {
         "q": "Tesla",
         "sortBy": 'popularity',
-        "apiKey": "779677d967a94d05b96915da5e5d6200"
+        "apiKey": ""
     }
     response_news = requests.get(url="https://newsapi.org/v2/everything", params=parameters_news)
     response_news.raise_for_status()
